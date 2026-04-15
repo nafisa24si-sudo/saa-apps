@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Saa Apps</string>
+
+    <!-- STRING UNTUK TUGAS LOGIN -->
+    <string name="login_desc">Silakan masuk ke akun Anda</string>
+    <string name="btn_login">Masuk</string>
+    <string name="welcome_title">Selamat Datang</string>
+    <string name="welcome_desc">Anda berhasil login ke aplikasi</string>
+</resources>

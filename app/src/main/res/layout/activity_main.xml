@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:background="#F5F9FF"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Halo, Nafisa"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#334155"
+        android:layout_marginBottom="40dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRumusBangunRuang"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Rumus Bangun Ruang"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#223187"
+        app:cornerRadius="16dp"
+        android:layout_marginBottom="16dp"
+        app:elevation="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCustom1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Custom 1"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0D2954"
+        app:cornerRadius="16dp"
+        android:layout_marginBottom="16dp"
+        app:elevation="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCustom2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Custom 2"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#1B74FA"
+        app:cornerRadius="16dp"
+        android:layout_marginBottom="16dp"
+        app:elevation="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnToFourth"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Ke Fourth Activity"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0D3171"
+        app:cornerRadius="16dp"
+        android:layout_marginBottom="32dp"
+        app:elevation="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="#FFB5B5"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:textStyle="bold" />
+
+</LinearLayout>

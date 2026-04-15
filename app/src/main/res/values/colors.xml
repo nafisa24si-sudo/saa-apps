@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Warna utama - cerah dan modern -->
+    <color name="primary">#FF6B6B</color>
+    <color name="primaryLight">#FFE0E0</color>
+    <color name="primaryDark">#E84545</color>
+    <color name="accent">#4ECDC4</color>
+    <color name="accentLight">#D1F2EF</color>
+
+    <!-- Warna background -->
+    <color name="background">#FFF9F9</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Warna teks -->
+    <color name="textPrimary">#2D3436</color>
+    <color name="textSecondary">#636E72</color>
+    <color name="text_dark">#2D3436</color>
+    <color name="text_light">#B2BEC3</color>
+
+    <!-- Warna border -->
+    <color name="gray_border">#DFE6E9</color>
+
+    <!-- Warna card -->
+    <color name="cardBackground">#FFFFFF</color>
+</resources>
