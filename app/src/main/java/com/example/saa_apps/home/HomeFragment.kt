@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.saa_apps.R
 import com.example.saa_apps.databinding.FragmentHomeBinding
 import com.example.saa_apps.Pertemuan_2.SecondActivity
-import com.example.saa_apps.Pertemuan_3.LoginActivity
+import com.example.saa_apps.Quiz.LoginActivity
 import com.example.saa_apps.pertemuan4.Custom1Activity
 import com.example.saa_apps.pertemuan4.Custom2Activity
 import com.example.saa_apps.pertemuan4.FourthActivity

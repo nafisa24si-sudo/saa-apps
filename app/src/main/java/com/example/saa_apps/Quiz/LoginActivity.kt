@@ -1,4 +1,4 @@
-package com.example.saa_apps.pertemuan4
+package com.example.saa_apps.Quiz   // ← PACKAGE QUIZ
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -8,10 +8,10 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.saa_apps.Quiz.RegisterActivity   // ← UBAH (tambah Quiz.)
 import com.example.saa_apps.R
+import com.example.saa_apps.pertemuan4.MainActivity
 
-class AuthActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private lateinit var etUsername: EditText
     private lateinit var etPassword: EditText
@@ -42,7 +42,7 @@ class AuthActivity : AppCompatActivity() {
         }
 
         btnRegister.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)  // ← UBAH (sudah pakai RegisterActivity dari Quiz)
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
     }
