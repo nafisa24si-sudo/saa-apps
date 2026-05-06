@@ -12,9 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Saaapps">
 
-        <!-- LOGIN ACTIVITY (LAUNCHER) -->
+        <!-- BaseActivity sebagai LAUNCHER (SEMENTARA UNTUK TESTING) -->
         <activity
-            android:name=".Pertemuan_3.LoginActivity"
+            android:name=".BaseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,15 +22,23 @@
             </intent-filter>
         </activity>
 
-        <!-- WELCOME ACTIVITY -->
+        <!-- SplashScreenActivity -->
         <activity
-            android:name=".Pertemuan_3.WelcomeActivity"
+            android:name=".SplashScreenActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Saaapps" />
+
+        <!-- Login Activity -->
+        <activity
+            android:name=".pertemuan4.AuthActivity"
             android:exported="false" />
 
-        <!-- PERTEMUAN 4 ACTIVITIES -->
+        <!-- Main Activity (sudah tidak digunakan) -->
         <activity
             android:name=".pertemuan4.MainActivity"
             android:exported="false" />
+
+        <!-- Pertemuan 4 - Activity Lainnya -->
         <activity
             android:name=".pertemuan4.RumusBangunRuangActivity"
             android:exported="false" />
@@ -42,11 +50,6 @@
             android:exported="false" />
         <activity
             android:name=".pertemuan4.FourthActivity"
-            android:exported="false" />
-
-        <!-- ACTIVITY LAMA -->
-        <activity
-            android:name=".Pertemuan_2.SecondActivity"
             android:exported="false" />
 
     </application>

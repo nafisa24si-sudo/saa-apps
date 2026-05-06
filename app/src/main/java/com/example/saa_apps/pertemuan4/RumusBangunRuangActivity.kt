@@ -1,11 +1,14 @@
 package com.example.saa_apps.pertemuan4
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import com.example.saa_apps.R
+import com.google.android.material.appbar.MaterialToolbar
 
 class RumusBangunRuangActivity : AppCompatActivity() {
 
@@ -15,9 +18,14 @@ class RumusBangunRuangActivity : AppCompatActivity() {
 
         Log.e("onCreate", "RumusBangunRuangActivity dibuat pertama kali")
 
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val tvJudul = findViewById<TextView>(R.id.tvJudul)
         val tvDeskripsi = findViewById<TextView>(R.id.tvDeskripsi)
         val btnBack = findViewById<Button>(R.id.btnBack)
+        val btnWebView = findViewById<Button>(R.id.btnWebView)
 
         tvJudul.text = intent.getStringExtra("JUDUL")
         tvDeskripsi.text = intent.getStringExtra("DESKRIPSI")
@@ -25,6 +33,19 @@ class RumusBangunRuangActivity : AppCompatActivity() {
         btnBack.setOnClickListener {
             finish()
         }
+
+        btnWebView.setOnClickListener {
+            val intent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://nafisa24si.alwaysdata.net/dashboard")
+            )
+            startActivity(intent)
+        }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 
     override fun onStart() {

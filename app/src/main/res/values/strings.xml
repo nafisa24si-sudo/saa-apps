@@ -6,4 +6,6 @@
     <string name="btn_login">Masuk</string>
     <string name="welcome_title">Selamat Datang</string>
     <string name="welcome_desc">Anda berhasil login ke aplikasi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

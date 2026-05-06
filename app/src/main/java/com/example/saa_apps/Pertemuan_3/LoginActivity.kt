@@ -8,7 +8,6 @@ import com.example.saa_apps.databinding.ActivityLoginBinding
 import com.example.saa_apps.pertemuan4.MainActivity
 
 class LoginActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

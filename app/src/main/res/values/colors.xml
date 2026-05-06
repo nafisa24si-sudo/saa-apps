@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Warna utama - cerah dan modern -->
-    <color name="primary">#FF6B6B</color>
+    <color name="primary">#5D4EEF</color>
     <color name="primaryLight">#FFE0E0</color>
-    <color name="primaryDark">#E84545</color>
-    <color name="accent">#4ECDC4</color>
+    <color name="primaryDark">#375AB4</color>
+    <color name="accent">#3774D0</color>
     <color name="accentLight">#D1F2EF</color>
 
     <!-- Warna background -->
