@@ -1,102 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#F5F5F5">
+    android:background="@color/background">
 
-    <!-- Toolbar -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#2E7D32"
-        app:titleTextColor="@android:color/white" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+        <!-- Judul Bina Desa -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bina Desa"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_marginTop="10dp" />
 
+        <!-- Sapaan User -->
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Halo, Admin"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selamat Datang Kembali!"
+            android:textSize="14sp"
+            android:textColor="@color/textSecondary"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Tombol Rumus Bangun Ruang -->
+        <Button
+            android:id="@+id/btnRumusBangunRuang"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Rumus Bangun Ruang"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/primary"
+            app:cornerRadius="12dp" />
+
+        <!-- Label Akses Cepat -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Akses Cepat"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Grid Custom 1 & 2 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-            <!-- Selamat Datang -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Selamat Datang"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="#2E7D32"
-                android:gravity="center"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Halo, admin"
-                android:textSize="16sp"
-                android:gravity="center"
-                android:layout_marginBottom="24dp" />
-
-            <!-- Tombol Rumus Bangun Ruang -->
-            <Button
-                android:id="@+id/btnRumusBangunRuang"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Rumus Bangun Ruang"
-                android:layout_marginBottom="12dp"
-                style="@style/Widget.Material3.Button" />
-
-            <!-- Tombol Custom 1 -->
             <Button
                 android:id="@+id/btnCustom1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
                 android:text="Custom 1"
-                android:layout_marginBottom="12dp"
-                style="@style/Widget.Material3.Button" />
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/primaryLight"
+                android:textColor="@color/primary"
+                app:cornerRadius="12dp" />
 
-            <!-- Tombol Custom 2 -->
             <Button
                 android:id="@+id/btnCustom2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
                 android:text="Custom 2"
-                android:layout_marginBottom="12dp"
-                style="@style/Widget.Material3.Button" />
-
-            <!-- Tombol Fourth Activity -->
-            <Button
-                android:id="@+id/btnFourthActivity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Fourth Activity"
-                android:layout_marginBottom="12dp"
-                style="@style/Widget.Material3.Button" />
-
-            <!-- Tombol Web View -->
-            <Button
-                android:id="@+id/btnWebView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Web View"
-                android:layout_marginBottom="24dp"
-                style="@style/Widget.Material3.Button" />
-
-            <!-- Tombol Logout -->
-            <Button
-                android:id="@+id/btnLogout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Logout"
-                android:backgroundTint="#D32F2F"
-                style="@style/Widget.Material3.Button" />
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/primaryLight"
+                android:textColor="@color/primary"
+                app:cornerRadius="12dp" />
 
         </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+
+        <!-- Tombol Ke Fourth Activity -->
+        <Button
+            android:id="@+id/btnToFourth"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:text="Ke Fourth Activity"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/accent"
+            app:cornerRadius="12dp" />
+
+        <!-- Label Navigasi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Navigasi"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Tombol Pertemuan 9 -->
+        <Button
+            android:id="@+id/btnPertemuan9"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Pertemuan 9"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="#9C27B0"
+            app:cornerRadius="12dp" />
+
+        <!-- Tombol Logout -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:text="Logout"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="#D32F2F"
+            app:cornerRadius="12dp" />
+
+        <!-- Spacer bottom -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+
+</ScrollView>

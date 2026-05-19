@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        app:titleTextColor="@color/white"
+        app:title="Pertemuan 9"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Input Email -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="20dp"
+        android:hint="Email"
+        app:startIconDrawable="@drawable/ic_edit"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Input Password (BARU) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="16dp"
+        android:hint="Password"
+        app:endIconMode="password_toggle"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Tombol Login -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="16dp"
+        android:text="Login"
+        app:icon="@drawable/ic_login"
+        app:iconGravity="textStart"
+        app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ChipGroup -->
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:singleSelection="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipTerbaru"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Terbaru" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPenting"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Penting" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBelumDibaca"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Belum Dibaca" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- GridLayout Menu -->
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:padding="16dp"
+        app:columnCount="3"
+        app:useDefaultMargins="true"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroupFilter">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMenu1"
+            android:text="Menu 1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMenu2"
+            android:text="Messages"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMenu3"
+            android:text="Menu 3"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMenu4"
+            android:text="Menu 4"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMenu5"
+            android:text="Menu 5"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMenu6"
+            android:text="Menu 6"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
