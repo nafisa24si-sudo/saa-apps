@@ -9,11 +9,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.example.saa_apps.R
+import com.example.saa_apps.data.entity.MessageEntity
 
 class MessageAdapter(
     context: Context,
-    private val messages: List<MessageModel>
-) : ArrayAdapter<MessageModel>(context, 0, messages) {
+    private val messages: List<MessageEntity>  // UBAH KE MessageEntity
+) : ArrayAdapter<MessageEntity>(context, 0, messages) {  // UBAH KE MessageEntity
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         var view = convertView
@@ -27,19 +28,22 @@ class MessageAdapter(
         val textSender = view.findViewById<TextView>(R.id.textSender)
         val textMessage = view.findViewById<TextView>(R.id.textMessage)
 
-        // Load gambar dari URL
         Glide.with(context)
             .load(message.avatarUrl)
-            .placeholder(R.drawable.ic_profile)  // gambar sementara saat loading
-            .error(R.drawable.ic_profile)        // gambar jika error
-            .circleCrop()                         // bentuk bulat
+            .placeholder(R.drawable.ic_profile)
+            .error(R.drawable.ic_profile)
+            .circleCrop()
             .into(avatarImg)
 
         textSender.text = message.senderName
         textMessage.text = message.messageText
 
         view.setOnClickListener {
-            android.widget.Toast.makeText(context, "Pesan dari ${message.senderName}: ${message.messageText}", android.widget.Toast.LENGTH_SHORT).show()
+            android.widget.Toast.makeText(
+                context,
+                "Pesan dari ${message.senderName}: ${message.messageText}",
+                android.widget.Toast.LENGTH_SHORT
+            ).show()
         }
 
         return view

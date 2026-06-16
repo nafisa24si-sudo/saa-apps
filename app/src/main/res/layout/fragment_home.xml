@@ -3,150 +3,203 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:background="#F5F7FA">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:paddingBottom="20dp">
 
-        <!-- Judul Bina Desa -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bina Desa"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            android:textColor="#2196F3"
-            android:layout_marginTop="10dp" />
-
-        <!-- Sapaan User -->
-        <TextView
-            android:id="@+id/tvUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Halo, Admin"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@color/textPrimary"
-            android:layout_marginTop="20dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Selamat Datang Kembali!"
-            android:textSize="14sp"
-            android:textColor="@color/textSecondary"
-            android:layout_marginBottom="32dp" />
-
-        <!-- Tombol Rumus Bangun Ruang -->
-        <Button
-            android:id="@+id/btnRumusBangunRuang"
+        <!-- Header Biru -->
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:text="Rumus Bangun Ruang"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:backgroundTint="@color/primary"
-            app:cornerRadius="12dp" />
+            android:layout_height="200dp">
 
-        <!-- Label Akses Cepat -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#1976D2" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#55000000" />
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_margin="16dp"
+                android:text="Halo, User"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvVillageName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desa Bina Sejahtera"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Membangun dari Desa untuk Indonesia"
+                    android:textColor="#B3D4FC"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- Menu Utama -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Akses Cepat"
-            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Layanan Desa"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/textPrimary"
-            android:layout_marginTop="28dp"
-            android:layout_marginBottom="12dp" />
+            android:textColor="#1565C0" />
 
-        <!-- Grid Custom 1 & 2 -->
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2">
+            android:layout_margin="12dp"
+            android:columnCount="2"
+            android:rowCount="2">
 
             <Button
                 android:id="@+id/btnCustom1"
                 android:layout_width="0dp"
                 android:layout_height="80dp"
-                android:layout_weight="1"
-                android:layout_marginEnd="8dp"
-                android:text="Custom 1"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:text="Profil Desa"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                android:backgroundTint="@color/primaryLight"
-                android:textColor="@color/primary"
-                app:cornerRadius="12dp" />
+                android:textColor="@android:color/white"
+                android:backgroundTint="#1E88E5" />
 
             <Button
                 android:id="@+id/btnCustom2"
                 android:layout_width="0dp"
                 android:layout_height="80dp"
-                android:layout_weight="1"
-                android:layout_marginStart="8dp"
-                android:text="Custom 2"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:text="Kabar Desa"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                android:backgroundTint="@color/primaryLight"
-                android:textColor="@color/primary"
-                app:cornerRadius="12dp" />
+                android:textColor="@android:color/white"
+                android:backgroundTint="#1E88E5" />
 
-        </LinearLayout>
+            <Button
+                android:id="@+id/btnRumusBangunRuang"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:text="Peta Wilayah"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#1E88E5" />
 
-        <!-- Tombol Ke Fourth Activity -->
-        <Button
-            android:id="@+id/btnToFourth"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="16dp"
-            android:text="Ke Fourth Activity"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:backgroundTint="@color/accent"
-            app:cornerRadius="12dp" />
+            <Button
+                android:id="@+id/btnToFourth"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:text="Galeri Desa"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#1E88E5" />
 
-        <!-- Label Navigasi -->
+        </GridLayout>
+
+        <!-- Tugas Latihan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Navigasi"
-            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Tugas Latihan"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/textPrimary"
-            android:layout_marginTop="28dp"
-            android:layout_marginBottom="12dp" />
+            android:textColor="#1565C0" />
 
-        <!-- Tombol Pertemuan 9 -->
-        <Button
-            android:id="@+id/btnPertemuan9"
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:text="Pertemuan 9"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:backgroundTint="#9C27B0"
-            app:cornerRadius="12dp" />
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:columnCount="2"
+            android:rowCount="2">
 
-        <!-- Tombol Logout -->
+            <Button
+                android:id="@+id/btnPertemuan9"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:text="Pertemuan 9"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#42A5F5" />
+
+            <Button
+                android:id="@+id/btnPertemuan10"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:text="Pertemuan 10"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#42A5F5" />
+
+            <Button
+                android:id="@+id/btnNote"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:text="Kelola Berita"
+                android:textSize="14sp"
+                android:textColor="#1565C0"
+                android:backgroundTint="#0C88E4" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp" />
+
+        </GridLayout>
+
+        <!-- Logout -->
         <Button
             android:id="@+id/btnLogout"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
             android:text="Logout"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:backgroundTint="#D32F2F"
-            app:cornerRadius="12dp" />
-
-        <!-- Spacer bottom -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#5353E6" />
 
     </LinearLayout>
 

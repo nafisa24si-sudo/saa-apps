@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.devtools.ksp)
 }
 
 android {
@@ -34,6 +35,11 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
+    // TAMBAHKAN INI untuk KSP
+    kotlin {
+        jvmToolchain(11)
+    }
 }
 
 dependencies {
@@ -52,17 +58,26 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    // Navigation Component (untuk BottomNavigation)
+    // Navigation Component
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
     // Fragment
     implementation("androidx.fragment:fragment-ktx:1.6.2")
 
-    // Material Design (versi terbaru)
+    // Material Design
     implementation("com.google.android.material:material:1.12.0")
 
-    // Glide untuk gambar (ListView Custom Adapter)
+    // Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
+
+    // ============ ROOM DATABASE ============
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+
+    // Lifecycle
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
 }
