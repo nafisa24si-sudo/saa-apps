@@ -9,10 +9,6 @@
         android:title="About"
         android:icon="@drawable/ic_about" />
     <item
-        android:id="@+id/nav_note"
-        android:title="Note"
-        android:icon="@drawable/ic_note" />
-    <item
         android:id="@+id/nav_profile"
         android:title="Profile"
         android:icon="@drawable/ic_profile" />
@@ -20,4 +16,12 @@
         android:id="@+id/nav_message"
         android:title="Messages"
         android:icon="@drawable/ic_message" />
+    <item
+        android:id="@+id/nav_note"
+        android:title="Note"
+        android:icon="@drawable/ic_note" />
+    <item
+        android:id="@+id/nav_reminder"
+        android:title="Reminder"
+        android:icon="@drawable/ic_notification" />
 </menu>

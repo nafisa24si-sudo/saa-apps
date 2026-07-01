@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        app:titleTextColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardReminder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏰ Atur Pengingat"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary" />
+
+            <TextView
+                android:id="@+id/tvKegiatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kegiatan: Gotong Royong"
+                android:textSize="14sp"
+                android:textColor="@color/textSecondary"
+                android:layout_marginTop="8dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_border"
+                android:layout_marginVertical="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengingat dalam (menit)"
+                android:textSize="14sp"
+                android:textColor="@color/textSecondary" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Contoh: 1, 5, 10">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMinutes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSetReminder"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="16dp"
+        android:text="Set Pengingat"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/primary"
+        app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardReminder" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

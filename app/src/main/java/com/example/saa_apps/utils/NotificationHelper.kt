@@ -1,0 +1,58 @@
+package com.example.saa_apps.utils
+
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Context
+import android.content.Intent
+import android.os.Build
+import androidx.core.app.NotificationCompat
+import com.example.saa_apps.R
+
+object NotificationHelper {
+
+    private const val CHANNEL_ID = "bina_desa_channel"
+    private const val CHANNEL_NAME = "Informasi Bina Desa"
+    private const val NOTIFICATION_ID = 1001
+
+    fun showNotification(
+        context: Context,
+        title: String,
+        message: String,
+        targetIntent: Intent
+    ) {
+        val manager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
+        // Buat channel notifikasi (Android 8+)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channel = NotificationChannel(
+                CHANNEL_ID,
+                CHANNEL_NAME,
+                NotificationManager.IMPORTANCE_HIGH
+            )
+            channel.description = "Channel notifikasi Bina Desa"
+            manager.createNotificationChannel(channel)
+        }
+
+        // Buat PendingIntent
+        val pendingIntent = PendingIntent.getActivity(
+            context,
+            0,
+            targetIntent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+
+        // Buat Notifikasi
+        val notification = NotificationCompat.Builder(context, CHANNEL_ID)
+            .setSmallIcon(R.mipmap.ic_launcher)
+            .setContentTitle(title)
+            .setContentText(message)
+            .setAutoCancel(true)
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setContentIntent(pendingIntent)
+            .build()
+
+        // Tampilkan notifikasi
+        manager.notify(NOTIFICATION_ID, notification)
+    }
+}

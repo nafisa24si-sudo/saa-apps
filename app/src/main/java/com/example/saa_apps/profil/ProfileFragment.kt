@@ -1,4 +1,4 @@
-package com.example.saa_apps.profile
+package com.example.saa_apps.profil
 
 import android.os.Bundle
 import android.view.LayoutInflater

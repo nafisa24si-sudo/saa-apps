@@ -1,12 +1,11 @@
-package com.example.saa_apps
+package com.example.saa_apps.pertemuan4
 
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.example.saa_apps.pertemuan4.AuthActivity
-import com.example.saa_apps.pertemuan4.MainActivity
+import com.example.saa_apps.R
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
