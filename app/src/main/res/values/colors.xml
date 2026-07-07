@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Warna utama - cerah dan modern -->
-    <color name="primary">#5D4EEF</color>
-    <color name="primaryLight">#FFE0E0</color>
-    <color name="primaryDark">#375AB4</color>
-    <color name="accent">#3774D0</color>
-    <color name="accentLight">#D1F2EF</color>
+    <!-- Bina Desa Official Theme (Material 3 Emerald) -->
+    <color name="primary">#059669</color>
+    <color name="secondary">#10B981</color>
+    <color name="accent">#A7F3D0</color>
+    <color name="background">#F3F7F4</color>
+    <color name="surface">#FFFFFF</color>
 
-    <!-- Warna background -->
-    <color name="background">#FFF9F9</color>
+    <color name="textPrimary">#1F2937</color>
+    <color name="textSecondary">#64748B</color>
+    <color name="border">#D1D5DB</color>
+    <color name="danger">#DC2626</color>
+    <color name="success">#16A34A</color>
+
+    <!-- Legacy / Utility -->
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="gray_border">#D1D5DB</color>
+    <color name="text_light">#64748B</color>
+    <color name="text_dark">#1F2937</color>
 
-    <!-- Warna teks -->
-    <color name="textPrimary">#2D3436</color>
-    <color name="textSecondary">#636E72</color>
-    <color name="text_dark">#2D3436</color>
-    <color name="text_light">#B2BEC3</color>
-
-    <!-- Warna border -->
-    <color name="gray_border">#DFE6E9</color>
-
-    <!-- Warna card -->
-    <color name="cardBackground">#FFFFFF</color>
+    <!-- Navigation indicator -->
+    <color name="nav_indicator">#A7F3D0</color>
+    <color name="nav_active_icon">#059669</color>
+    <color name="nav_inactive_icon">#94A3B8</color>
 </resources>

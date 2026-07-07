@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.saa_apps.R
+import com.example.saa_apps.pertemuan11.OnboardingActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -22,12 +23,13 @@ class SplashScreenActivity : AppCompatActivity() {
         lifecycleScope.launch {
             delay(2000)
 
+            val onboardingFinished = sharedPref.getBoolean("onboarding_finished", false)
             val isLogin = sharedPref.getBoolean("isLogin", false)
 
-            val nextActivity = if (isLogin) {
-                MainActivity::class.java
-            } else {
-                AuthActivity::class.java
+            val nextActivity = when {
+                !onboardingFinished -> OnboardingActivity::class.java
+                isLogin -> MainActivity::class.java
+                else -> AuthActivity::class.java
             }
 
             startActivity(Intent(this@SplashScreenActivity, nextActivity))

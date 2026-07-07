@@ -13,7 +13,16 @@ class WelcomeActivity : AppCompatActivity() {
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Tambahkan Toolbar Back Button
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Bina Desa"
+
         val username = intent.getStringExtra("USERNAME") ?: "Pengguna"
         binding.tvUserName.text = username
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressedDispatcher.onBackPressed()
+        return true
     }
 }

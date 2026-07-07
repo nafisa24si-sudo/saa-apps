@@ -7,21 +7,13 @@
     <item
         android:id="@+id/nav_about"
         android:title="About"
-        android:icon="@drawable/ic_about" />
+        android:icon="@drawable/ic_info" />
     <item
         android:id="@+id/nav_profile"
         android:title="Profile"
-        android:icon="@drawable/ic_profile" />
+        android:icon="@drawable/ic_person" />
     <item
-        android:id="@+id/nav_message"
+        android:id="@+id/nav_messages"
         android:title="Messages"
         android:icon="@drawable/ic_message" />
-    <item
-        android:id="@+id/nav_note"
-        android:title="Note"
-        android:icon="@drawable/ic_note" />
-    <item
-        android:id="@+id/nav_reminder"
-        android:title="Reminder"
-        android:icon="@drawable/ic_notification" />
 </menu>

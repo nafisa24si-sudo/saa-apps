@@ -1,93 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#F5F5F5">
+    android:background="@color/background">
 
-    <!-- Toolbar -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#2E7D32"
-        app:titleTextColor="@android:color/white" />
+        android:layout_height="wrap_content"
+        android:background="@color/primary">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Tentang Portal"
+            app:titleTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="24dp">
 
-            <!-- Judul -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Digitalisasi Desa"
+                android:textColor="@color/primary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:letterSpacing="0.1" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="📖 Tentang Bina Desa"
+                android:layout_marginTop="8dp"
+                android:text="Membangun Masa Depan dari Akar Rumput"
+                android:textColor="@color/textPrimary"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:textColor="#2E7D32"
-                android:gravity="center"
-                android:layout_marginBottom="20dp" />
+                android:lineSpacingMultiplier="1.1" />
 
-            <!-- Definisi -->
-            <TextView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="📌 Definisi"
-                android:textSize="18sp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E5E7EB">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Misi Kami"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Bina Desa hadir sebagai solusi teknologi untuk mempercepat pelayanan publik dan transparansi tata kelola desa di era digital."
+                        android:textColor="@color/textSecondary"
+                        android:lineSpacingMultiplier="1.4" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Fokus Utama"
                 android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:id="@+id/tvDefinition"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Bina Desa adalah program pemberdayaan masyarakat desa yang bertujuan untuk meningkatkan kesejahteraan melalui pendampingan dan pengembangan potensi lokal."
-                android:textSize="16sp"
-                android:lineSpacingExtra="4dp"
-                android:layout_marginBottom="20dp" />
-
-            <!-- Tujuan -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="🎯 Tujuan"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
+                android:textColor="@color/textPrimary" />
 
-            <TextView
-                android:id="@+id/tvPurpose"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1. Meningkatkan kualitas hidup masyarakat desa\n2. Mengembangkan potensi ekonomi lokal\n3. Memperkuat kelembagaan desa\n4. Mewujudkan tata kelola pemerintahan desa yang baik"
-                android:textSize="16sp"
-                android:lineSpacingExtra="4dp"
-                android:layout_marginBottom="20dp" />
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
 
-            <!-- Fitur Aplikasi -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="✨ Fitur Aplikasi"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
+                <!-- Simple Web-like List -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="12dp"
+                    android:text="• Pemberdayaan Ekonomi Lokal"
+                    android:textColor="@color/textSecondary" />
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F3F4F6" />
 
-            <TextView
-                android:id="@+id/tvFeatures"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="• Informasi Potensi Desa\n• Manajemen Program Kerja\n• Laporan Kegiatan\n• Galeri Dokumentasi\n• Forum Diskusi Warga"
-                android:textSize="16sp"
-                android:lineSpacingExtra="4dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="12dp"
+                    android:text="• Transparansi Anggaran"
+                    android:textColor="@color/textSecondary" />
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F3F4F6" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="12dp"
+                    android:text="• Layanan Surat Digital"
+                    android:textColor="@color/textSecondary" />
+            </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

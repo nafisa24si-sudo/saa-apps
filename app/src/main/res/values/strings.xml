@@ -1,11 +1,52 @@
 <resources>
     <string name="app_name">Bina Desa</string>
 
-    <!-- STRING UNTUK TUGAS LOGIN -->
+    <!-- ==================== AUTHENTICATION ==================== -->
     <string name="login_desc">Silakan masuk ke akun Anda</string>
     <string name="btn_login">Masuk</string>
+    <string name="btn_register">Daftar Baru</string>
     <string name="welcome_title">Selamat Datang</string>
     <string name="welcome_desc">Anda berhasil login ke aplikasi</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="desc_logo_kemendesa">Logo Kementerian Desa</string>
+
+    <!-- ==================== DASHBOARD HEADER ==================== -->
+    <string name="greeting_user">Halo, %1$s 👋</string>
+    <string name="welcome_dashboard">Selamat Datang di Bina Desa</string>
+    <string name="title_section_services">Layanan Desa</string>
+
+    <!-- ==================== VISI MISI ==================== -->
+    <string name="title_visi">Visi Desa</string>
+    <string name="content_visi">\"Terwujudnya Desa Bina Sejahtera yang Mandiri, Religius, dan Berbudaya melalui Tata Kelola Pemerintahan yang Transparan.\"</string>
+    <string name="title_misi">Misi Desa</string>
+    <string name="misi_1">1. Meningkatkan kualitas sumber daya manusia melalui pendidikan dan pelatihan ketrampilan.</string>
+    <string name="misi_2">2. Mengembangkan ekonomi kerakyatan berbasis potensi lokal dan UMKM.</string>
+    <string name="misi_3">3. Mewujudkan infrastruktur desa yang memadai dan ramah lingkungan.</string>
+    <string name="misi_4">4. Mengoptimalkan pelayanan publik yang transparan, cepat, dan akuntabel.</string>
+    <string name="misi_5">5. Melestarikan nilai-nilai budaya lokal dan mempererat kerukunan antar warga.</string>
+
+    <!-- ==================== DASHBOARD MENU LABELS ============ -->
+    <string name="menu_layanan">Layanan</string>
+    <string name="menu_agenda">Agenda</string>
+    <string name="menu_catatan">Catatan</string>
+    <string name="menu_pengingat">Pengingat</string>
+    <string name="menu_dokumentasi">Dokumentasi</string>
+    <string name="menu_berita">Berita</string>
+    <string name="menu_qr_scanner">QR Scanner</string>
+    <string name="menu_kamera">Kamera</string>
+    <string name="menu_database">Database</string>
+    <string name="menu_notifikasi">Notifikasi</string>
+
+    <!-- ==================== BUTTONS & FEEDBACK ==================== -->
+    <string name="btn_logout">Keluar dari Sesi</string>
+    <string name="feature_in_development">Fitur sedang dikembangkan</string>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <string name="nav_home">Home</string>
+    <string name="nav_about">About</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_messages">Messages</string>
+    <string name="nav_notification">Notifikasi</string>
+
+    <!-- ==================== PLACEHOLDERS ==================== -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

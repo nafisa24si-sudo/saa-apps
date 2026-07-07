@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Visi Desa"
+            android:text="@string/title_visi"
             android:textColor="@color/primary"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
-                android:text="\&quot;Terwujudnya Desa Bina Sejahtera yang Mandiri, Religius, dan Berbudaya melalui Tata Kelola Pemerintahan yang Transparan.\&quot;"
+                android:text="@string/content_visi"
                 android:textColor="@color/textPrimary"
                 android:textSize="16sp"
                 android:textStyle="italic"
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Misi Desa"
+            android:text="@string/title_misi"
             android:textColor="@color/primary"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -65,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:text="1. Meningkatkan kualitas sumber daya manusia melalui pendidikan dan pelatihan ketrampilan."
+                    android:text="@string/misi_1"
                     android:textColor="@color/textPrimary" />
             </com.google.android.material.card.MaterialCardView>
 
@@ -80,7 +80,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:text="2. Mengembangkan ekonomi kerakyatan berbasis potensi lokal dan UMKM."
+                    android:text="@string/misi_2"
                     android:textColor="@color/textPrimary" />
             </com.google.android.material.card.MaterialCardView>
 
@@ -95,7 +95,37 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:text="3. Mewujudkan infrastruktur desa yang memadai dan ramah lingkungan."
+                    android:text="@string/misi_3"
+                    android:textColor="@color/textPrimary" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Misi 4 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="1dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/misi_4"
+                    android:textColor="@color/textPrimary" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Misi 5 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="1dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/misi_5"
                     android:textColor="@color/textPrimary" />
             </com.google.android.material.card.MaterialCardView>
 

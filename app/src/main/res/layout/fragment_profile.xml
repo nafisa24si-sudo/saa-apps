@@ -6,17 +6,18 @@
     android:orientation="vertical"
     android:background="#F5F5F5">
 
-    <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#2E7D32"
+        android:background="@color/primary"
+        app:title="Profil Pengembang"
         app:titleTextColor="@android:color/white" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:padding="16dp">
 
         <LinearLayout
@@ -25,77 +26,53 @@
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
-            <!-- Avatar -->
-            <View
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivUserAvatar"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/ic_profile"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/logo_kemendesa"
+                app:shapeAppearanceOverlay="@style/CircleImage"
+                app:strokeColor="@color/primary"
+                app:strokeWidth="2dp" />
 
-            <!-- Nama -->
             <TextView
                 android:id="@+id/tvName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nama: [Nama Lengkap Anda]"
+                android:text="Nama: [Nama Anda]"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:layout_marginBottom="8dp" />
-
-            <!-- NIM -->
-            <TextView
-                android:id="@+id/tvNim"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="NIM: [NIM Anda]"
-                android:textSize="16sp"
-                android:gravity="center"
-                android:layout_marginBottom="8dp" />
-
-            <!-- Kelas -->
-            <TextView
-                android:id="@+id/tvClass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Kelas: [Kelas Anda]"
-                android:textSize="16sp"
-                android:gravity="center"
-                android:layout_marginBottom="20dp" />
-
-            <!-- Deskripsi -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="📱 Tentang Pengembang"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp" />
 
             <TextView
                 android:id="@+id/tvDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Halo! Saya adalah pengembang aplikasi Bina Desa ini. Aplikasi ini dibuat untuk membantu pendataan dan pemantauan program pembangunan desa di wilayah binaan."
+                android:text="Halo! Saya adalah pengembang aplikasi Bina Desa ini."
                 android:textSize="14sp"
                 android:gravity="center"
-                android:lineSpacingExtra="4dp"
                 android:padding="12dp"
                 android:background="#E8F5E9" />
 
-            <!-- Kontak -->
-            <TextView
-                android:id="@+id/tvEmail"
+            <!-- TOMBOL LOGOUT (Sesuai Gambar Anda) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="📧 Email: [email Anda]"
-                android:textSize="14sp"
-                android:gravity="center"
-                android:layout_marginTop="16dp"
-                android:padding="8dp" />
+                android:layout_height="55dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/btn_logout"
+                android:textAllCaps="false"
+                android:textColor="@color/danger"
+                android:textStyle="bold"
+                app:cornerRadius="28dp"
+                app:icon="@drawable/ic_logout"
+                app:iconGravity="textStart"
+                app:iconTint="@color/danger"
+                app:strokeColor="@color/danger" />
 
         </LinearLayout>
     </ScrollView>
